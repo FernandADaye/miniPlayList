@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(77, 77, 77);
+}
+.row-container{
+    overflow-y: scroll;
+    height: 80vh;
+}
+.row-song{
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow:0 19px 38px rgb(34, 34, 34)
+}
+.row-song p, .row-song h4{
+    margin: 0;
+}
