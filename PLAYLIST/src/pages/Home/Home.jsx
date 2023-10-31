@@ -1,5 +1,6 @@
 import React from 'react'
-import SongList from '../../components/SongList/SongList'
+import SongList from '@/components/SongList/SongList'
+import SongDetails from '@/components/SongDetails/SongDetails'
 import './Home.css'
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
         </div>
         <div className='derecho'>
           <h2>Derecho</h2>
-          <div>Lorequaerat omni repellendus magnam saepe maximeorequaerat omni repellendus magnam saepe maximeorequaerat omni repellendus magnam saepe maxime.</div>
+          <SongDetails />
         </div>
       </div>
     </>
