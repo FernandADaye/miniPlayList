@@ -2,7 +2,7 @@ import './SongList.css'
 import { useSongContext } from '../hooks/useSongContext'
 
 const SongList = () => {
-  const { list, loading } = useSongContext
+  const { list, loading } = useSongContext()
   return (
     <>
       <section className='row-container'>

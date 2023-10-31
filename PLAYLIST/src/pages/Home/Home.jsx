@@ -15,6 +15,7 @@ const Home = () => {
           </div>
           <div className='derecho'>
             <h2>Derecho</h2>
+            <br />
             <SongDetails />
           </div>
         </div>

@@ -1,9 +1,12 @@
 import React from 'react'
+import './SongDetails.css'
 
 const SongDetails = () => {
   return (
     <>
-      <h2>detalles de la cancion que seleccionaste </h2>
+      <div>
+        <h2>detalles de la cancion que seleccionaste </h2>
+      </div>
     </>
   )
 }
