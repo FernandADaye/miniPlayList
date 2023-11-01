@@ -5,16 +5,19 @@ body{
 }
 .home-conteiner{
 display: flex;
-width: 100%;
+flex-wrap: wrap;
 height: 100%;
+width: 100%;
 
 }
 .derecho{
     display: flex;
     flex-wrap:wrap;
-    width: 50%;
+flex-direction: column;
     justify-content: center;
     color: aliceblue;
+    align-items: center;
+    width: 70% ;
 
 }
 .izquierdo{
@@ -22,6 +25,7 @@ height: 100%;
     display: flex;
     flex-wrap:wrap;
     width: 30%;
+    height: 100%;
     background-color: rgba(53, 52, 52, 0.897);
     color: aliceblue;
 
