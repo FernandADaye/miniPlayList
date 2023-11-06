@@ -1,10 +1,5 @@
 import './App.css'
-import Dashboard from './pages/Dashboard'
-import Home from './pages/Home'
-import Login from './pages/Login'
-import Secret from './pages/Secret'
-import Singup from './pages/Singup'
-
+import { Dashboard, Home, Login, Secret, Singup } from '@/pages'
 function App () {
   return (
     <>
