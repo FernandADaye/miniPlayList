@@ -5,3 +5,19 @@
 .header-nav-imagen{
     @include imagen()
 }
+.header__nav{
+    display: flex;
+
+}
+.header__nav-lista{
+    display: flex;
+    text-decoration: none;
+
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
