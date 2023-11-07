@@ -1,0 +1,7 @@
+@mixin imagen{
+    width: 4rem;
+    height: 4rem;
+}
+.header-nav-imagen{
+    @include imagen()
+}
