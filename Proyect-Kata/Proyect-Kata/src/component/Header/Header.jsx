@@ -19,7 +19,6 @@ const Header = () => {
           <li className='header__nav-lista-elemento'>
             <a className='header__lista-elemento-a' href='/Singup'>Singup</a>
           </li>
-
         </ul>
       </nav>
     </>
