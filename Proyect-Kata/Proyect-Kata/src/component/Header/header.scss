@@ -26,6 +26,10 @@
         @include general()
     }
     &__lista-elemento-a{
-        @include general()
+        @include general();
+        &:hover{
+            color: rgb(0, 0, 0);
+            text-decoration: overline solid 1px black;
+        }
     }
 }
