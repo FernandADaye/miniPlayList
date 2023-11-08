@@ -3,7 +3,7 @@ import React from 'react'
 const Singup = () => {
   return (
     <>
-      <h1>hoa</h1>
+      <h1>SingUp</h1>
     </>
   )
 }
