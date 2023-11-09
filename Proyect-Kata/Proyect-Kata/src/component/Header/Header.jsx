@@ -4,7 +4,7 @@ import './header.scss'
 
 const Header = () => {
   const LinkIsActive = (isActive) => {
-    return isActive ? 'header__lista-elemento-a :hover' : 'header__nav-lista-elemento'
+    return isActive ? 'header__lista-elemento-a-selected' : 'header__nav-lista-elemento'
   }
   return (
     <>
