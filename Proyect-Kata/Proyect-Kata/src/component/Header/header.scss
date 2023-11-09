@@ -2,7 +2,7 @@
 @mixin general{
     background-color: rgb(199, 197, 197);
     margin: 0;
-    padding: 8px;
+    padding: 10px;
     flex-wrap: wrap;
     color: rgb(70, 69, 69);
     font-size: small;
@@ -36,6 +36,7 @@
     border-radius: 30px;
     text-decoration: none;
     padding: 10px;
+    margin: 0;
     background-color: rgb(128, 126, 126);
     box-shadow: 1px 0px 10px #0c0c0c86 ;
 }
