@@ -14,6 +14,7 @@
     align-items: center;
     
 }
+
 .header{
     @include general();
     &__nav-logo{
@@ -27,9 +28,10 @@
     }
     &__lista-elemento-a{
         @include general();
-        &:hover{
-            color: rgb(0, 0, 0);
-            text-decoration: overline solid 1px black;
-        }
+        
     }
+}
+
+.header__lista-elemento-a-selected{
+    color: black;
 }

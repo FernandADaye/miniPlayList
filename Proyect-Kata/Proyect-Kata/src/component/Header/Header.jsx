@@ -3,6 +3,9 @@ import { NavLink } from 'react-router-dom'
 import './header.scss'
 
 const Header = () => {
+  const LinkIsActive = (isActive) => {
+    return isActive ? 'header__lista-elemento-a :hover' : 'header__nav-lista-elemento'
+  }
   return (
     <>
       <nav className='header'>
@@ -15,28 +18,28 @@ const Header = () => {
           <li className='header__nav-lista-elemento'>
             <NavLink
               to='/Home'
-              className='header__lista-elemento-a'
+              className={({ isActive }) => LinkIsActive(isActive)}
             >Home
             </NavLink>
           </li>
           <li className='header__nav-lista-elemento'>
             <NavLink
               to='/Dashboard'
-              className='header__lista-elemento-a'
+              className={({ isActive }) => LinkIsActive(isActive)}
             >Dashboard
             </NavLink>
           </li>
           <li className='header__nav-lista-elemento'>
             <NavLink
               to='/Login'
-              className='header__lista-elemento-a'
+              className={({ isActive }) => LinkIsActive(isActive)}
             >Login
             </NavLink>
           </li>
           <li className='header__nav-lista-elemento'>
             <NavLink
               to='/Singup'
-              className='header__lista-elemento-a'
+              className={({ isActive }) => LinkIsActive(isActive)}
             >Singup
             </NavLink>
           </li>
