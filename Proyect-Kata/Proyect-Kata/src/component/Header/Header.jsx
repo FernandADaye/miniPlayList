@@ -6,19 +6,39 @@ const Header = () => {
   return (
     <>
       <nav className='header'>
-        <NavLink className='header__nav-logo' href='/'>Logo</NavLink>
+        <NavLink
+          to='/'
+          className='header__nav-logo'
+        >Logo
+        </NavLink>
         <ul className='header__nav-lista'>
           <li className='header__nav-lista-elemento'>
-            <NavLink href='/Home' className='header__lista-elemento-a'>Home</NavLink>
+            <NavLink
+              to='/Home'
+              className='header__lista-elemento-a'
+            >Home
+            </NavLink>
           </li>
           <li className='header__nav-lista-elemento'>
-            <NavLink className='header__lista-elemento-a' href='/Dashboard'>Dashboard</NavLink>
+            <NavLink
+              to='/Dashboard'
+              className='header__lista-elemento-a'
+            >Dashboard
+            </NavLink>
           </li>
           <li className='header__nav-lista-elemento'>
-            <NavLink className='header__lista-elemento-a' href='/Login'>Login</NavLink>
+            <NavLink
+              to='/Login'
+              className='header__lista-elemento-a'
+            >Login
+            </NavLink>
           </li>
           <li className='header__nav-lista-elemento'>
-            <NavLink className='header__lista-elemento-a' href='/Singup'>Singup</NavLink>
+            <NavLink
+              to='/Singup'
+              className='header__lista-elemento-a'
+            >Singup
+            </NavLink>
           </li>
         </ul>
       </nav>
