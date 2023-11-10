@@ -5,7 +5,6 @@ const Singup = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors }
   } = useForm()
 
@@ -16,6 +15,8 @@ const Singup = () => {
         <main className='form-signin w-100 m-auto'>
           <form onSubmit={handleSubmit(onSubmit)}>
             <h1 className='h3 mb-3 fw-normal'>Please sign in</h1>
+
+            {/* seccion de first_name */}
             <div className='form-floating'>
               <input
                 type='text'
@@ -27,6 +28,9 @@ const Singup = () => {
               />
               <label htmlFor='floatingInput'>Name</label>
             </div>
+            {errors.first_name && <span>This field is required</span>}
+
+            {/* seccion de last_name  */}
             <div className='form-floating'>
               <input
                 type='text'
@@ -36,8 +40,11 @@ const Singup = () => {
                 placeholder='Doe'
                 {...register('last_name', { required: true })}
               />
-              <label htmlFor='floatingInput'>Name</label>
+              <label htmlFor='floatingInput'>Last Name</label>
             </div>
+            {errors.last_name && <span>This field is required</span>}
+
+            {/* seccion de gender  */}
             <div className='form-floating'>
               <select
                 className='form-select'
@@ -50,6 +57,9 @@ const Singup = () => {
               </select>
               <label htmlFor='gender'>Gender</label>
             </div>
+            {errors.gender && <span>This field is required</span>}
+
+            {/* seccion de email  */}
             <div className='form-floating'>
               <input
                 type='email'
@@ -61,6 +71,9 @@ const Singup = () => {
               />
               <label htmlFor='floatingInput'>Email address</label>
             </div>
+            {errors.email && <span>This field is required</span>}
+
+            {/* seccion de password  */}
             <div className='form-floating'>
               <input
                 type='password'
@@ -72,6 +85,9 @@ const Singup = () => {
               />
               <label htmlFor='floatingPassword'>Password</label>
             </div>
+            {errors.password && <span>This field is required</span>}
+
+            {/* button */}
             <button className='btn btn-primary w-100 py-2' type='submit'>
               Sign in
             </button>
