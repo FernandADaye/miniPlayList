@@ -1,5 +1,5 @@
 import React from 'react'
-import { registerUseService } from '@/services/userServices'
+import { registerUserService } from '@/services/userServices'
 import { useNavigate } from 'react-router-dom'
 
 import { useForm } from 'react-hook-form'
@@ -14,13 +14,13 @@ const Singup = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await registerUseService(data)
+      const response = await registerUserService(data)
       if (response.status === 201) {
         console.log('bien')
-        navigate('/login')
+        navigate('/Login')
       }
     } catch (error) {
-      console.log('error', error.message)
+      console.log('Error', error.message)
     }
   }
   return (
