@@ -1,4 +1,6 @@
 import React from 'react'
+import { registerUseService } from '@/services/useServices'
+
 import { useForm } from 'react-hook-form'
 
 const Singup = () => {
@@ -8,7 +10,16 @@ const Singup = () => {
     formState: { errors }
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = async (data) => {
+    try {
+      const response = await registerUseService(data)
+      if (response.status === 201) {
+        console.log('bien')
+      }
+    } catch (error) {
+      console.log('error', error.message)
+    }
+  }
   return (
     <>
       <div className='form-container'>
