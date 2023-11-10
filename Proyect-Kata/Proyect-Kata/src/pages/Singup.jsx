@@ -1,9 +1,11 @@
 import React from 'react'
-import { registerUseService } from '@/services/useServices'
+import { registerUseService } from '@/services/userServices'
+import { useNavigate } from 'react-router-dom'
 
 import { useForm } from 'react-hook-form'
 
 const Singup = () => {
+  const navigate = useNavigate()
   const {
     register,
     handleSubmit,
@@ -15,6 +17,7 @@ const Singup = () => {
       const response = await registerUseService(data)
       if (response.status === 201) {
         console.log('bien')
+        navigate('/login')
       }
     } catch (error) {
       console.log('error', error.message)
