@@ -16,7 +16,6 @@ const Singup = () => {
     try {
       const response = await registerUserService(data)
       if (response.status === 201) {
-        console.log('bien')
         navigate('/Login')
       }
     } catch (error) {
