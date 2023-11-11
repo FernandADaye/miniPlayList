@@ -36,7 +36,7 @@ const Singup = () => {
                 className='form-control'
                 id='first_name'
                 name='first_name'
-                placeholder='Doe'
+                placeholder='John'
                 {...register('first_name', { required: true })}
               />
               <label htmlFor='floatingInput'>Name</label>
@@ -63,6 +63,7 @@ const Singup = () => {
                 className='form-select'
                 id='gender'
                 name='gender'
+                {...register('gender')}
               >
                 <option value=''>Choose...</option>
                 <option value='M'>Male</option>
@@ -77,8 +78,8 @@ const Singup = () => {
               <input
                 type='email'
                 className='form-control'
-                name='email'
                 id='email'
+                name='email'
                 placeholder='name@example.com'
                 {...register('email', { required: true })}
               />
