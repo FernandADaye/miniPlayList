@@ -1,16 +1,29 @@
 import React from 'react'
+import { loginUserService } from '@/services/userServices'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 import './pages.scss'
 
 const Login = () => {
+  const navigate = useNavigate()
+
   const {
     register,
     handleSubmit,
     formState: { errors }
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = async (data) => {
+    try {
+      const response = await loginUserService(data)
+      if (response.status === 200) {
+        navigate('/Home')
+      }
+    } catch (error) {
+      console.log('Error', error.message)
+    }
+  }
 
   return (
     <>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { registerUserService } from '@/services/userServices'
 import { useNavigate } from 'react-router-dom'
-
 import { useForm } from 'react-hook-form'
 
 const Singup = () => {
