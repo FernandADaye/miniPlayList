@@ -14,6 +14,17 @@
     align-items: center;
     
 }
+
+@mixin select{
+    color: rgb(31, 34, 36);
+border: solid  rgb(128, 126, 126) 1px;
+border-radius: 30px;
+text-decoration: none;
+padding: 10px;
+margin: 0;
+background-color: rgb(128, 126, 126);
+box-shadow: 1px 0px 10px #0c0c0c86 ;
+}
 .header{
     @include general();
     &__nav-logo{
@@ -26,17 +37,18 @@
         @include general()
     }
     &__lista-elemento-a{
-        @include general();
-        
+        @include general()
     }
 }
 .header__lista-elemento-a-selected{
-    color: rgb(31, 34, 36);
-    border: solid  rgb(128, 126, 126) 1px;
-    border-radius: 30px;
-    text-decoration: none;
-    padding: 10px;
-    margin: 0;
-    background-color: rgb(128, 126, 126);
-    box-shadow: 1px 0px 10px #0c0c0c86 ;
+    @include select
 }
+
+
+
+
+
+
+
+
+
