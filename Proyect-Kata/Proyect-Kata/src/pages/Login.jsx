@@ -18,10 +18,11 @@ const Login = () => {
     try {
       const response = await loginUserService(data)
       if (response.status === 200) {
+        console.log('Usuario ingresado exitosamente ', response.data.token)
         navigate('/Home')
       }
     } catch (error) {
-      console.log('Error', error.message)
+      console.log('Error al registrarse', error.message)
     }
   }
 
