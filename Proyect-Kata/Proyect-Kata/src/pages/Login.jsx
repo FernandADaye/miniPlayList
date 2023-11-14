@@ -18,7 +18,8 @@ const Login = () => {
     try {
       const response = await loginUserService(data)
       if (response.status === 200) {
-        console.log('Usuario ingresado exitosamente ', response.data.token)
+        // console.log('Usuario ingresado exitosamente ', response.data.token)
+        localStorage.setItem('token', response.data.token)
         navigate('/Home')
       }
     } catch (error) {
