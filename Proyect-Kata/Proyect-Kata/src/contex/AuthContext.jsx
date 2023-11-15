@@ -4,9 +4,13 @@ import { jwtDecode } from 'jwt-decode'
 const AuthContext = createContext()
 const [isAuth, setIsAuth] = useState(false)
 const [userPlayLoad, setuserPlayLoad] = useState(null)
+
 const AuthProvider = ({ children }) => {
   const loding = (token) => {
     localStorage.setItem('token', token)
+    const decode= jwtDecode(token)
+    setuserPlayLoad(decode)
+    setIsAuth(true)
   }
   return (
     <AuthContext.Provider value={{}}>
