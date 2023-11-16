@@ -12,6 +12,11 @@ const AuthProvider = ({ children }) => {
     setuserPlayLoad(decode)
     setIsAuth(true)
   }
+  const logout=()=>{
+    localStorage.removeItem('token')
+    setuserPlayLoad(null)
+    setIsAuth(false)
+  }
   return (
     <AuthContext.Provider value={{}}>
       {children}
