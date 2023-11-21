@@ -9,8 +9,12 @@ const Routesindex = () => {
     <Routes>
       <Route path='/home' element={<Home />} />
       <Route path='/login' element={<Login />} />
-      <Route path='/dashboard' element={<Dashboard />} />
+      <Route
+        path='/dashboard'
+        element={isAuth ? <Dashboard /> : <Navigate to='/Login' />}
+      />
       <Route path='/singup' element={<Singup />} />
+
       <Route
         path='/secret'
         element={isAuth ? <Secret /> : <Navigate to='/Login' />}
