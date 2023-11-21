@@ -35,17 +35,18 @@ const Header = () => {
           {isAuth
             ? (
               <>
-                <li className='header__list-item'>
+                <li className='header__nav-lista-elemento'>
                   <NavLink
                     to='/secret'
-                    className={({ isActive }) => linkIsActive(isActive)}
+                    className={({ isActive }) => LinkIsActive(isActive)}
                   >Secret
                   </NavLink>
                 </li>
-                <li className='header__nav-lista-elemento'>
+                <li>
                   <NavLink
                     to='/home'
                     onClick={logout}
+                    className='header__nav-lista-elemento'
                   >LogOut
                   </NavLink>
                 </li>
@@ -53,22 +54,23 @@ const Header = () => {
               )
             : (
               <>
+                <li className='header__nav-lista-elemento'>
+                  <NavLink
+                    to='/Login'
+                    className={({ isActive }) => LinkIsActive(isActive)}
+                  >Login
+                  </NavLink>
+                </li>
+                <li className='header__nav-lista-elemento'>
+                  <NavLink
+                    to='/Singup'
+                    className={({ isActive }) => LinkIsActive(isActive)}
+                  >Singup
+                  </NavLink>
+                </li>
               </>
               )}
-          <li className='header__nav-lista-elemento'>
-            <NavLink
-              to='/Login'
-              className={({ isActive }) => LinkIsActive(isActive)}
-            >Login
-            </NavLink>
-          </li>
-          <li className='header__nav-lista-elemento'>
-            <NavLink
-              to='/Singup'
-              className={({ isActive }) => LinkIsActive(isActive)}
-            >Singup
-            </NavLink>
-          </li>
+
         </ul>
       </nav>
     </>
