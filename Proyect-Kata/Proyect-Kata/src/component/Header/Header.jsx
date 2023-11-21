@@ -1,8 +1,11 @@
 import React from 'react'
+import { useAuthContext } from '@/hooks/useAuthContext'
 import { NavLink } from 'react-router-dom'
 import './header.scss'
 
 const Header = () => {
+  const { isAuth, logout } = useAuthContext()
+
   const LinkIsActive = (isActive) => {
     return isActive ? 'header__lista-elemento-a-selected' : 'header__nav-lista-elemento'
   }
@@ -29,6 +32,29 @@ const Header = () => {
             >Dashboard
             </NavLink>
           </li>
+          {isAuth
+            ? (
+              <>
+                <li className='header__list-item'>
+                  <NavLink
+                    to='/secret'
+                    className={({ isActive }) => linkIsActive(isActive)}
+                  >Secret
+                  </NavLink>
+                </li>
+                <li className='header__nav-lista-elemento'>
+                  <NavLink
+                    to='/home'
+                    onClick={logout}
+                  >LogOut
+                  </NavLink>
+                </li>
+              </>
+              )
+            : (
+              <>
+              </>
+              )}
           <li className='header__nav-lista-elemento'>
             <NavLink
               to='/Login'
