@@ -11,7 +11,7 @@ function App () {
       <AuthProvider>
         <BrowserRouter>
           <Header />
-          Principal
+
           <Routesindex />
         </BrowserRouter>
       </AuthProvider>
