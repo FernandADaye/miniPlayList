@@ -7,7 +7,7 @@ const AuthProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false)
   const [userPlayLoad, setuserPlayLoad] = useState(null)
 
-  const login = (token) => {
+  const loginn = (token) => {
     localStorage.setItem('token', token)
     const decode = jwtDecode(token)
     setuserPlayLoad(decode)
@@ -26,14 +26,15 @@ const AuthProvider = ({ children }) => {
       setIsAuth(true)
     }
   }, [])
+
   const data = {
     isAuth,
     userPlayLoad,
-    login,
+    loginn,
     logout
   }
   return (
-    <AuthContext.Provider value={{}}>
+    <AuthContext.Provider value={data}>
       {children}
     </AuthContext.Provider>
   )

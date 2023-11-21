@@ -7,8 +7,8 @@ import { useAuthContext } from '@/hooks/useAuthContext'
 import './pages.scss'
 
 const Login = () => {
-  const { login } = useAuthContext()
   const navigate = useNavigate()
+  const { loginn } = useAuthContext()
   const {
     register,
     handleSubmit,
@@ -19,9 +19,9 @@ const Login = () => {
     try {
       const response = await loginUserService(data)
       if (response.status === 200) {
+        loginn(response.data.token)
         // console.log('Usuario ingresado exitosamente ', response.data.token)
         // localStorage.setItem('token', response.data.token) no es necesario ya (useAuthContext lo mejora)
-        login(response.data.token)
         navigate('/Home')
       }
     } catch (error) {
