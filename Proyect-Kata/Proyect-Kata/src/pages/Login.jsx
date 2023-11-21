@@ -2,12 +2,13 @@ import React from 'react'
 import { loginUserService } from '@/services/userServices'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
+import { useAuthContext } from '@/hooks/useAuthContext'
 
 import './pages.scss'
 
 const Login = () => {
+  const { login } = useAuthContext()
   const navigate = useNavigate()
-
   const {
     register,
     handleSubmit,
@@ -19,7 +20,8 @@ const Login = () => {
       const response = await loginUserService(data)
       if (response.status === 200) {
         // console.log('Usuario ingresado exitosamente ', response.data.token)
-        localStorage.setItem('token', response.data.token)
+        // localStorage.setItem('token', response.data.token) no es necesario ya (useAuthContext lo mejora)
+        login(response.data.token)
         navigate('/Home')
       }
     } catch (error) {

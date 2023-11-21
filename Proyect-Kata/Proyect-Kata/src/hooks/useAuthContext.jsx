@@ -1,9 +1,9 @@
 import { useContext } from 'react'
 import { AuthContext } from '@/contex/AuthContext'
-export const useSongContext = () => {
+export const useAuthContext = () => {
   const context = useContext(AuthContext)
   if (!context) {
-    throw new Error('Error')
+    throw new Error('carajo')
   }
   return context
 }

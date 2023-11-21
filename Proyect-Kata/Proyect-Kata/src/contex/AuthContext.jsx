@@ -2,14 +2,12 @@ import { createContext, useState, useEffect } from 'react'
 import { jwtDecode } from 'jwt-decode'
 
 const AuthContext = createContext()
-// const [isAuth, setIsAuth] = useState(false)
-// const [userPlayLoad, setuserPlayLoad] = useState(null)
 
 const AuthProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false)
   const [userPlayLoad, setuserPlayLoad] = useState(null)
 
-  const loding = (token) => {
+  const login = (token) => {
     localStorage.setItem('token', token)
     const decode = jwtDecode(token)
     setuserPlayLoad(decode)
@@ -31,7 +29,7 @@ const AuthProvider = ({ children }) => {
   const data = {
     isAuth,
     userPlayLoad,
-    loding,
+    login,
     logout
   }
   return (
